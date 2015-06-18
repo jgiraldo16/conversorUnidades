@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" ng-app>
 <head>
   <meta charset="UTF-8">
   <title>Conversor de Unidades</title>
@@ -16,20 +16,25 @@
   			<h4>Ingresa la cantidad a convertir</h4>
   		</div>
   		<div class="col-md-3">
-  			<input type="text" class="form-control">
+  			<input type="text" class="form-control" ng-model="cantidad">
   		</div>
   		<div class="col-md-3">
   			<h4>Selecciona la unidad</h4>
   		</div>
   		<div class="col-md-3">
   			<select class="form-control">
-  				<option>Bytes</option>
-				<option>KB - KiloBytes</option>  				
-				<option>MB - MegaBytes</option>  				
-				<option>GB - GigaBytes</option>  				
-				<option>TB - TeraBytes</option>
+  				<option value="bytes">Bytes</option>
+				<option value="kilobytes">KB - KiloBytes</option>  				
+				<option value="megabytes">MB - MegaBytes</option>  				
+				<option value="gigabytes">GB - GigaBytes</option>  				
+				<option value="terabytes">TB - TeraBytes</option>
   			</select>
   		</div>
+  	</div>
+
+  	<div class="row">
+  		{{ cantidad * 1 }} Bytes
+  		{{ cantidad / 1024}} KiloBytes
   	</div>
   </div>
 </body>
