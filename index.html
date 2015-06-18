@@ -1,41 +1,68 @@
 <!DOCTYPE html>
-<html lang="es" ng-app>
+<html lang="es" ng-app="conversor">
 <head>
   <meta charset="UTF-8">
   <title>Conversor de Unidades</title>
   <!--Angular-->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+  <script src="app.js"></script>
   <!--Bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
   <div class="container">
-  	<div class="row">
-  		<div class="col-md-3">
-  			<h4>Ingresa la cantidad a convertir</h4>
-  		</div>
-  		<div class="col-md-3">
-  			<input type="text" class="form-control" ng-model="cantidad">
-  		</div>
-  		<div class="col-md-3">
-  			<h4>Selecciona la unidad</h4>
-  		</div>
-  		<div class="col-md-3">
-  			<select class="form-control">
-  				<option value="bytes">Bytes</option>
-				<option value="kilobytes">KB - KiloBytes</option>  				
-				<option value="megabytes">MB - MegaBytes</option>  				
-				<option value="gigabytes">GB - GigaBytes</option>  				
-				<option value="terabytes">TB - TeraBytes</option>
-  			</select>
-  		</div>
-  	</div>
+    <div class="row">
+        <div class="col-md-3">
+            <h4>Ingresa la cantidad a convertir</h4>
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control" ng-model="cantidad">
+        </div>
+        <div class="col-md-3">
+            <h4>Selecciona la unidad</h4>
+        </div>
 
-  	<div class="row">
-  		{{ cantidad * 1 }} Bytes
-  		{{ cantidad / 1024}} KiloBytes
-  	</div>
+        <div class="col-md-3">
+            <select class="form-control">
+                <option value="bytes">Bytes</option>
+                <option value="kilobytes">KB - KiloBytes</option>               
+                <option value="megabytes">MB - MegaBytes</option>               
+                <option value="gigabytes">GB - GigaBytes</option>               
+                <option value="terabytes">TB - TeraBytes</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9"></div>
+        <div class="col-md-3"><button type="button" class="btn btn-success btn-block" ng-click='calcularMedida()'>Calcular</button></div>
+    </div>
+
+    <div class="contenedor">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Bits</th>
+                    <th>Bytes</th>
+                    <th>KiloBytes</th>
+                    <th>MegaBytes</th>
+                    <th>GigaBytes</th>
+                    <th>TeraBytes</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Hola</td>
+                    <td>Lorem</td>
+                    <td>alsdfj</td>
+                    <td>asdfasdf</td>
+                    <td>adsfasdf</td>
+                    <td>asdfasdf</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
   </div>
 </body>
 </html>
